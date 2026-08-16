@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import AboutUs from "./AboutUs";
+import ProductList from "./ProductList";
 import "./App.css";
 
 function Home() {
@@ -11,8 +12,8 @@ function Home() {
 
           <p>
             Welcome to Paradise Nursery, your online destination for beautiful
-            houseplants. We make it easy to discover plants that bring freshness,
-            beauty, and nature into your home.
+            houseplants. We make it easy to discover plants that bring
+            freshness, beauty, and nature into your home.
           </p>
 
           <Link to="/plants" className="get-started-btn">
@@ -20,15 +21,6 @@ function Home() {
           </Link>
         </div>
       </div>
-    </div>
-  );
-}
-
-function Plants() {
-  return (
-    <div>
-      <h1>Plants</h1>
-      <p>Our plants will be displayed here.</p>
     </div>
   );
 }
@@ -47,8 +39,11 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/plants" element={<Plants />} />
+
+        <Route path="/plants" element={<ProductList />} />
+
         <Route path="/cart" element={<Cart />} />
+
         <Route path="/about" element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
