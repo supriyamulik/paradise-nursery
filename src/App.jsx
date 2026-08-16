@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import AboutUs from "./AboutUs";
+import CartItem from "./CartItem";
 import ProductList from "./ProductList";
 import "./App.css";
 
@@ -25,15 +26,6 @@ function Home() {
   );
 }
 
-function Cart() {
-  return (
-    <div>
-      <h1>Shopping Cart</h1>
-      <p>Your cart will be displayed here.</p>
-    </div>
-  );
-}
-
 function App() {
   return (
     <BrowserRouter>
@@ -42,7 +34,7 @@ function App() {
 
         <Route path="/plants" element={<ProductList />} />
 
-        <Route path="/cart" element={<Cart />} />
+        <Route path="/cart" element={<CartItem />} />
 
         <Route path="/about" element={<AboutUs />} />
       </Routes>
